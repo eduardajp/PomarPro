@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CadUsuarioComponent } from './cad-usuario.component';
@@ -21,3 +22,28 @@ describe('CadUsuarioComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+=======
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { CadUsuarioComponent } from './cad-usuario.component';
+
+describe('CadUsuarioComponent', () => {
+  let component: CadUsuarioComponent;
+  let fixture: ComponentFixture<CadUsuarioComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [CadUsuarioComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(CadUsuarioComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+>>>>>>> 31e1ea3575f931228b958ed3138bb65a28294a19
