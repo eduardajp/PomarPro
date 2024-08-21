@@ -1,60 +1,11 @@
-<<<<<<< HEAD
 <app-menu></app-menu>
 <div class="pagina">
     <header>
-        <h1>Administração | Cadastro de usuários</h1>
+        <h1>Administração | Cadastro de Usuários</h1>
     </header>
     <form [formGroup]="formulario">
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Nome</mat-label>
-            
-            <input matInput formControlName="nome" type="text">
-        </mat-form-field>    
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Sobrenome</mat-label>
-            <input matInput formControlName="sobrenome" type="text">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary"  >
-            <mat-label>Telefone</mat-label>
-            <input matInput formControlName="telefone" type="text">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary" >
-            <mat-label>E-mail</mat-label>
-            <input matInput formControlName="email" type="text">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary" class="grande">
-            <mat-label>Endereço</mat-label>
-            <input matInput formControlName="endereco" type="text">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Login</mat-label>
-            <input matInput formControlName="login" type="text">
-        </mat-form-field>  
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Senha</mat-label>
-            <input matInput formControlName="login" type="text">
-        </mat-form-field>         
-        <div class="controles"> 
-            <button mat-raised-button [disabled]="formulario.enabled" (click)="onIncluir()">Incluir</button>
-            <button mat-raised-button [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
-            <button mat-raised-button [disabled]="formulario.disabled" (click)="onCancelar()">Cancelar</button>
-
-        </div>
-    </form>
-    <div>
-
-    </div>
-</div>
-=======
-<app-menu></app-menu>
-<div class="pagina">
-    <header>
-        <h1>Administração | Cadastro de usuários</h1>
-    </header>
-    <form [formGroup]="formulario">
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Nome</mat-label>
-            
             <input matInput formControlName="nome" type="text">
         </mat-form-field>    
         <mat-form-field appearance="outline" color="primary">
@@ -84,8 +35,23 @@
 
         </div>
     </form>
-    <div>
-
+    <div class='relatorio'>
+        <h2>Usuários Cadastrados</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Login</th>
+                <th>E-mail</th>
+            </tr>
+            <tr *ngFor="let usuario of relatorio">
+                <td><button>Excluir</button></td>
+                <td>{{usuario.nome}} {{usuario.sobrenome}}</td>
+                <td>{{usuario.telefone}}</td>
+                <td>{{usuario.login}}</td>
+                <td>{{usuario.email}}</td>
+            </tr>
+        </table>
     </div>
 </div>
->>>>>>> 31e1ea3575f931228b958ed3138bb65a28294a19

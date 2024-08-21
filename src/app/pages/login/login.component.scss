@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .fundo{
     background-image: url('/assets/img/pomar-1.jpg');
     background-size: cover;
@@ -77,84 +77,4 @@ footer{
 
 .erro{
  margin-left: 8vw;
-=======
-.fundo{
-    background-image: url('/assets/img/pomar-1.jpg');
-    background-size: cover;
-}
-
-header{
-    background-color:rgba(134, 81, 27, 0.219) ;
-    width: 30%;
-    height: 100%;
-}
-
-form {
-    background-color:rgba(134, 81, 27, 0.219) ;
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0px;
-    align-items:start;
-    color: black;
-}
-
-section{
-    height: 110%;
-    margin-top: 0px;
-}
-
-input{
-    margin: 2vw;
-    height: 3vw;
-    width: 20vw;
-    background-color:#d8a16b ;
-    border-radius: 5px;
-    box-shadow:0 0 0.9em rgba(75, 43, 0, 0.72);
-}
-
-button{
-    margin: 2vw;
-    height: 3vw;
-    width: 20vw;
-    background-color:#d8a16b ;
-    border-radius: 5px;
-    box-shadow:0 0 0.9em rgba(75, 43, 0, 0.72);
-}
-
-::placeholder{
-    color:rgb(0, 0, 0);
-    font-family: arial;
-}
-
-button:hover{
-    background-color:  #8d4705;
-    transition-duration: 1s;
-    cursor: help;
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    height: 40%;
-    width: 30%;
-    font-family: century gothic;
-    background-color:rgba(134, 81, 27, 0.219) ;
-}
-
-.loginnome{
-    font-size: 1.3vw;
-    font-family: century gothic;
-    color: #000000;
-    text-shadow:0 0 0.1em rgba(165, 73, 20, 0.72);
-    font-weight: bold;
-    font-style: italic;
-}
-
-.erro{
- margin-left: 8vw;
->>>>>>> 31e1ea3575f931228b958ed3138bb65a28294a19
 }

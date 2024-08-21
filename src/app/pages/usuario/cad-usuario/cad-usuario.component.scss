@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 header{
     height:15vh;
     h1{
@@ -19,16 +18,12 @@ button{
 form{
     height: 40vw;
     width: 50vw;
-=======
+}
 header{
     height:15vh;
     h1{
         font-size: 1.5em;
     }
-}
-mat-form-field{
-    margin-right: 15px;
-    width: 20vw;
 }
 button{
     margin-right: 19px;
@@ -39,5 +34,15 @@ button{
 form{
     height: 40vw;
     width: 50vw;
->>>>>>> 31e1ea3575f931228b958ed3138bb65a28294a19
+}
+.relatorio{
+    width: 80%;
+    height: 30%;
+    font-family: arial;
+    font-family: arial;
+    margin-top: -26%;
+    th{
+        border-bottom: 1px #ccc solid;
+        
+    }
 }

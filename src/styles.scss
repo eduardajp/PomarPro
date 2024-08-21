@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -12,7 +12,7 @@
 // Define the theme object.
 $pomarpro-theme: mat.define-theme((
   color: (
-    theme-type: dark,
+    theme-type: light,
     primary: mat.$orange-palette,
     tertiary: mat.$orange-palette,
   ),
@@ -52,53 +52,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 100vh;
     position:absolute;
     top:0;
-    right: 0;
-=======
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
+    right: 0;}
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
 
-// Define the theme object.
-$pomarpro-theme: mat.define-theme((
-  color: (
-    theme-type: dark,
-    primary: mat.$orange-palette,
-    tertiary: mat.$yellow-palette,
-  ),
-  density: (
-    scale: 0,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-:root {
-  @include mat.all-component-themes($pomarpro-theme);
-}
-
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($pomarpro-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($pomarpro-theme);
-/* You can add global styles to this file, and also import other style files */
-
-/* You can add global styles to this file, and also import other style files */
-html,body{
-    margin:0;
-    padding:0;
-    width: 100%;
-    height: 67%;
-    background-color: rgb(255, 255, 255); 
-}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -108,5 +64,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     position:absolute;
     top:0;
     right: 0;
->>>>>>> 31e1ea3575f931228b958ed3138bb65a28294a19
+
 }

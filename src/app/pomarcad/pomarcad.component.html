@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div class="pagina">
+    <header>
+        <h1>Administração | Cadastro do Pomar</h1>
+    </header>
+    <form [formGroup]="formulario">
+        <mat-form-field appearance="outline" color="primary">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome" type="text">
+        </mat-form-field>    
+        <mat-form-field appearance="outline" color="primary">
+            <mat-label>Linhas</mat-label>
+            <input matInput formControlName="num_linhas" type="text">
+        </mat-form-field> 
+        <mat-form-field appearance="outline" color="primary"  >
+            <mat-label>Colunas</mat-label>
+            <input matInput formControlName="num_colunas" type="text">
+        </mat-form-field>   
+        <div class="ricardofeio"> 
+            <button mat-raised-button [disabled]="formulario.enabled" (click)="onIncluir()">Incluir</button>
+            <button mat-raised-button [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
+            <button mat-raised-button [disabled]="formulario.disabled" (click)="onCancelar()">Cancelar</button>
+        </div>
+    </form>
+     <div class='formulario'>
+        <h2>Pomar</h2>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <th>Nome</th>
+                <th>Numero de Linhas</th>
+                <th>Numero de Colunas</th>
+            </tr>
+            <tr *ngFor="let formulario of Pomar">
+                <td><button>Excluir</button></td>
+                <td>{{formulario.tb_tipo_id}}</td>
+                <td>{{formulario.nome}}</td>
+                <td>{{formulario.num_linhas}}</td>
+                <td>{{formulario.num_colunas}}</td>
+            </tr>
+        </table>
+    </div>

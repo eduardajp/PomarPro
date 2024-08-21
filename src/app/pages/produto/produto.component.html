@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div class="pagina">
+    <header>
+        <h1>Administração | Produto</h1>
+    </header>
+    <form [formGroup]="produto">
+        <mat-form-field appearance="outline" color="primary">
+            <mat-label>Descrição</mat-label>
+            <input matInput formControlName="descricao" type="text">
+        </mat-form-field> 
+        <mat-form-field appearance="outline" color="primary"  >
+            <mat-label>Unidade de Medida</mat-label>
+            <input matInput formControlName="unidade" type="text">
+        </mat-form-field> 
+        <mat-form-field appearance="outline" color="primary" >
+            <mat-label>Valor</mat-label>
+            <input matInput formControlName="valor" type="text">
+        </mat-form-field> 
+    </form>
+    <div class="controles"> 
+        <button mat-raised-button [disabled]="produto.enabled" (click)="onIncluir()">Incluir</button>
+        <button mat-raised-button [disabled]="produto.invalid" (click)="onSalvar()">Salvar</button>
+        <button mat-raised-button [disabled]="produto.disabled" (click)="onCancelar()">Cancelar</button>
+    </div>
+     <div class='relatorio'>
+        <h2>Cadastro de produtos</h2>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Unidade de Medida</th>
+                <th>Valor</th>
+            </tr>
+            <tr *ngFor="let produto of relatorio">
+                <td><button>Excluir</button></td>
+                <td>{{produto.tb_tipo_id}}</td>
+                <td>{{produto.descricao}}</td>
+                <td>{{produto.unid_medida}}</td>
+                <td>{{produto.valor}}</td>
+            </tr>
+        </table>
+    </div>
