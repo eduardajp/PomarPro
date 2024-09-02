@@ -18,7 +18,7 @@ export class MovimentoComponent {
   movimento:FormGroup = new FormGroup ({
     quantidade:new FormControl('',Validators.required),
     produto:new FormControl('',Validators.required),
-    tb_movimentacao:new FormControl('',Validators.required),
+    tipo:new FormControl('',Validators.required),
   })
 
 onIncluir(){
@@ -66,7 +66,7 @@ onCancelar(){
 relatorio:any[] = [];
 
 buscaMovimento(){
-  this.MovimentoService.geMovimento().subscribe({
+  this.MovimentoService.getMovimento().subscribe({
     next:(resposta)=>{
       console.log(resposta);
       this.relatorio = resposta.body;

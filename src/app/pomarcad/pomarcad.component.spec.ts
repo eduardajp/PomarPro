@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PomarcadComponent } from './pomarcad.component';
+import { PomarCadComponent } from './pomarcad.component';
 
 describe('PomarcadComponent', () => {
-  let component: PomarcadComponent;
-  let fixture: ComponentFixture<PomarcadComponent>;
+  let component: PomarCadComponent;
+  let fixture: ComponentFixture<PomarCadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PomarcadComponent]
+      declarations: [PomarCadComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PomarcadComponent);
+    fixture = TestBed.createComponent(PomarCadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

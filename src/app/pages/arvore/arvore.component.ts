@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ArvoreService } from '../../services/arvore.service';
 
+
+
 @Component({
   selector: 'app-arvore',
   templateUrl: './arvore.component.html',
@@ -15,8 +17,11 @@ export class arvoreComponent {
  private snackbar:MatSnackBar
     
   ){
-    this.buscaArvore()
+    this.buscaarvore()
   }
+
+
+
   arvore:FormGroup = new FormGroup({ 
     id:new FormControl(null),
     defensivo:new FormControl('', Validators.required),
@@ -24,21 +29,28 @@ export class arvoreComponent {
     ultima_verif:new FormControl('',Validators.required ),
     tb_tipo_id:new FormControl('', Validators.required),
     tb_situacao_id:new FormControl('', Validators.required),
-   
+    linha:new FormControl('',Validators.required),
+    coluna:new FormControl('',Validators.required),
+    pomar:new FormControl('',Validators.required),
+
   })
   onIncluir(){
-    this.Arvore.reset();
-    this.Arvore.enable();
+    this.arvore.reset();
+    this.arvore.enable();
   }
 
+ 
   onSalvar(){
+    //guarda as informacoes em uma variavel pra melhorar o processo
     let info = this.arvore.value;
+    //verifica se esta inserindo ou alterando com base no valor do id (se for null, esta inserindo, senao esta alterando)
     if(info.id == null){
+      //ira inserir no banco de dados um usuario
       this.ArvoreService.addarvore(info).subscribe({
         next:(resposta)=>{
           console.log(resposta)
           this.snackbar.open(
-            "Á rvore adicionado com sucesso",
+            "arvore adicionado com sucesso",
             "OK",{
               verticalPosition:'top',
               horizontalPosition:'end',
@@ -50,7 +62,7 @@ export class arvoreComponent {
         error:(erro)=>{
           console.log(erro)
           this.snackbar.open(
-            "Erro ao adicionar Árvore",
+            "Erro ao adicionar arvore",
             "OK",{
               verticalPosition:'top',
               horizontalPosition:'end',
@@ -61,7 +73,11 @@ export class arvoreComponent {
         }
       })
     }else{
+      //ira alterar o usuario no banco de dados
+
     }
+
+
   }
 
   onCancelar(){
@@ -70,6 +86,7 @@ export class arvoreComponent {
   }
 
   relatorio:any[] = [];
+
 
   buscaarvore(){
     this.ArvoreService.getarvore().subscribe({
@@ -80,5 +97,11 @@ export class arvoreComponent {
     error:(erro)=>{
       console.log(erro)
     }
+
     })
-  }}
+  }
+
+  }
+
+
+

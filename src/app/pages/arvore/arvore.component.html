@@ -1,61 +1,89 @@
 <app-menu></app-menu>
-<div class="pag">
-    <header>
-        <h1>Administração | Arvores</h1>
-    </header>
-    <form [formGroup]="arvore">
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Defensivo</mat-label>
-            <input matInput formControlName="defensivo" type="text">
-        </mat-form-field>
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Fertilizante</mat-label>
-            <input matInput formControlName="fertilizante" type="text">
-        </mat-form-field>
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Ultima Verificação</mat-label>
-            <input matInput formControlName="ultima_verif" [matDatepicker]="ultima_verif">
-            <mat-datepicker-toggle matSuffix [for]="ultima_verif"></mat-datepicker-toggle>
-            <mat-datepicker #ultima_verif></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Tipo</mat-label>
-            <input matInput formControlName="tb_tipo_id" type="number">
-        </mat-form-field>
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Situação</mat-label>
-            <input matInput formControlName="tb_situacao_id" type="number">
-        </mat-form-field>
+<div class="pagina">
+  <header>
+    <h1>Administração | Arvores</h1>
+  </header>
+  <form [formGroup]="arvore">
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Defensivo</mat-label>
+      <input matInput formControlName="defensivo" type="text" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Fertilizante</mat-label>
+      <input matInput formControlName="fertilizante" type="text" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Ultima Verificação</mat-label>
+      <input matInput formControlName="ultima_verif" [matDatepicker]="ultima_verif"/>
+      <mat-datepicker-toggle matSuffix [for]="ultima_verif"></mat-datepicker-toggle>
+      <mat-datepicker #ultima_verif></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Tipo</mat-label>
+      <input matInput formControlName="tb_tipo_id" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Situação</mat-label>
+      <input matInput formControlName="tb_situacao_id" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Linha</mat-label>
+      <input matInput formControlName="linha" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Coluna</mat-label>
+      <input matInput formControlName="coluna" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Pomar</mat-label>
+      <input matInput formControlName="pomar" type="number" />
+    </mat-form-field>
 
     <div class="controles">
-        <button mat-stroked-button [disabled]="arvore.enabled" (click)="onIncluir()" color="primary">Incluir</button>
-        <button mat-stroked-button [disabled]="arvore.invalid" (click)="onSalvar()">Salvar</button>
-        <button mat-stroked-button [disabled]="arvore.disabled" (click)="onCancelar()">Cancelar</button>
+      <button
+        mat-stroked-button
+        [disabled]="arvore.enabled"
+        (click)="onIncluir()"
+        color="primary"
+      >
+        Incluir
+      </button>
+      <button
+        mat-stroked-button
+        [disabled]="arvore.invalid"
+        (click)="onSalvar()"
+      >
+        Salvar
+      </button>
+      <button
+        mat-stroked-button
+        [disabled]="arvore.disabled"
+        (click)="onCancelar()"
+      >
+        Cancelar
+      </button>
     </div>
 
-
-<div class="relatorio">
-    <h2>Árvores cadastradas</h2>
-    <table>
+    <div class="relatorio">
+      <h2>Arvores cadastradas</h2>
+      <table>
         <tr>
-            <th>Ação</th>
-            <th>defensivo</th>
-            <th>fertilizante</th>
-            <th>ultima_verif</th>
-            <th>tipo</th>
-            <th>situação</th>
-           
-          
+          <th>Ação</th>
+          <th>defensivo</th>
+          <th>fertilizante</th>
+          <th>ultima_verif</th>
+          <th>tipo</th>
+          <th>situação</th>
         </tr>
         <tr *ngFor="let arvore of relatorio">
-            <td><button>Excluir</button></td>
-            <td>{{arvore.defensivo}}</td>
-            <td>{{arvore.fertilizante}}</td>
-            <td>{{arvore.ultima_verif}}</td>
-            <td>{{arvore.ds_tipo}}</td>
-            <td>{{arvore.ds_situacao}}</td>
-           
+          <td><button>Excluir</button></td>
+          <td>{{ arvore.defensivo }}</td>
+          <td>{{ arvore.fertilizante }}</td>
+          <td>{{ arvore.ultima_verif }}</td>
+          <td>{{ arvore.ds_tipo }}</td>
+          <td>{{ arvore.ds_situacao }}</td>
         </tr>
-    </table>
+      </table>
+    </div>
+  </form>
 </div>
-

@@ -1,0 +1,24 @@
+header{
+    height:15vh;
+    h1{
+        font-size: 1.5em;
+        margin-top: -3%;
+    }
+}
+.relatorio{
+    position: absolute;
+    margin-left: 1%;
+    font-size: x-large;
+    
+}
+.relatorio td{
+    padding-left: 20px;
+    padding-right: 30px;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.relatorio button{
+    margin-right: 20px;
+    background-color: #f0c080;
+    
+}

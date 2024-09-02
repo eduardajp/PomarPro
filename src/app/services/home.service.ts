@@ -5,19 +5,19 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PomarCadService {
+export class HomeService {
 
  
 
   constructor(private http:HttpClient) { }
-  public addmaterial(info:any):Observable<any>{
-    return this.http.post("http://localhost:3000/pomarcad/add",
-    {info},
+
+  public gethome():Observable<any>{
+    return this.http.get('http://localhost:3000/home/buscaTodos',
     {observe:'response'})
   }
 
-  public getMaterial():Observable<any>{
-    return this.http.get('http://localhost:3000/pomarcad/buscaTodos',
+  public gethomeS():Observable<any>{
+    return this.http.get('http://localhost:3000/home/buscaTodosS',
     {observe:'response'})
   }
 

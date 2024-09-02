@@ -1,18 +1,20 @@
+
 <app-menu></app-menu>
 <div class="pagina">
     <header>
-        <h1>Administração | Cadastro de Usuários</h1>
+        <h1>Administração | Cadastro de Usuarios</h1>
     </header>
     <form [formGroup]="formulario">
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Nome</mat-label>
+            
             <input matInput formControlName="nome" type="text">
         </mat-form-field>    
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Sobrenome</mat-label>
             <input matInput formControlName="sobrenome" type="text">
         </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary"  >
+        <mat-form-field appearance="outline" color="accent"  >
             <mat-label>Telefone</mat-label>
             <input matInput formControlName="telefone" type="text">
         </mat-form-field> 
@@ -27,23 +29,32 @@
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Login</mat-label>
             <input matInput formControlName="login" type="text">
-        </mat-form-field>         
+        </mat-form-field>       
+        <mat-form-field appearance="outline" color="primary">
+            <mat-label>Senha</mat-label>
+            <input matInput formControlName="login" type="text">
+        </mat-form-field>       
+        
+            
+        
         <div class="controles"> 
-            <button mat-raised-button [disabled]="formulario.enabled" (click)="onIncluir()">Incluir</button>
-            <button mat-raised-button [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
-            <button mat-raised-button [disabled]="formulario.disabled" (click)="onCancelar()">Cancelar</button>
-
+            <button mat-stroked-button [disabled]="formulario.enabled" (click)="onIncluir()" color="primary">Incluir</button>
+            <button mat-stroked-button [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
+            <button mat-stroked-button [disabled]="formulario.disabled" (click)="onCancelar()">Cancelar</button>
         </div>
     </form>
-    <div class='relatorio'>
-        <h2>Usuários Cadastrados</h2>
+    <div class="detalhes">
+       
+    </div>
+    <div class="relatorio">
+        <h2>Usuários cadastrados</h2>
         <table>
             <tr>
                 <th>Ação</th>
                 <th>Nome</th>
                 <th>Telefone</th>
                 <th>Login</th>
-                <th>E-mail</th>
+                <th>e-mail</th>
             </tr>
             <tr *ngFor="let usuario of relatorio">
                 <td><button>Excluir</button></td>

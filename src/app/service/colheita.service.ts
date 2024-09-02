@@ -7,7 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ColheitaService {
 
-  constructor(private http:HttpClient) { }public addColheita(info:any):Observable<any>{
+  constructor(private http:HttpClient) { }
+  
+  
+  public addColheita(info:any):Observable<any>{
     return this.http.post(
       'http://localhost:3000/colheita/add',
       {info},
@@ -16,7 +19,7 @@ export class ColheitaService {
   }
 
   //Função de busca de usuários
-  public getMaterial():Observable<any>{
+  public getColheita():Observable<any>{
     return this.http.get(
       'http://localhost:3000/colheita/buscaTodos',
       {observe:'response'}

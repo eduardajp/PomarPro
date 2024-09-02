@@ -1,46 +1,60 @@
+
 <app-menu></app-menu>
-<div class="pag">
+<div class="pagina">
     <header>
         <h1>Administração | Colheita</h1>
     </header>
     <form [formGroup]="colheita">
-        <mat-form-field appearance="outline" color="primary">
+        
+            <mat-form-field appearance="outline" color="primary">
                 <mat-label>Quantidade</mat-label>
                 <input matInput formControlName="quantidade" type="number">
-        </mat-form-field>
+            </mat-form-field>
             <mat-form-field appearance="outline" color="primary">
         <mat-label>Data da Colheita</mat-label>
+            
             <input matInput formControlName="dt_colheita" [matDatepicker]="dt_colheita">
             <mat-datepicker-toggle matSuffix [for]="dt_colheita"></mat-datepicker-toggle>
         <mat-datepicker #dt_colheita></mat-datepicker>
+    
         </mat-form-field> 
+        
+      
+
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Arvore</mat-label>
-            <input matInput formControlName="td_arvore_id" type="number">
+            <input matInput formControlName="arvore" type="number">
         </mat-form-field>
     </form>
+    
+
     <div class="controles">
         <button mat-stroked-button [disabled]="colheita.enabled" (click)="onIncluir()" color="primary">Incluir</button>
         <button mat-stroked-button [disabled]="colheita.invalid" (click)="onSalvar()">Salvar</button>
         <button mat-stroked-button [disabled]="colheita.disabled" (click)="onCancelar()">Cancelar</button>
     </div>
+    <div class="relatorio">
+        <h2>Colheitas cadastradas</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+                <th>Arvore</th>
+                
+              
+            </tr>
+            <tr *ngFor="let colheita of relatorio">
+                <td><button>Excluir</button></td>
+                <td>{{colheita.quantidade}}</td>
+                <td>{{colheita.dt_colheita}}</td>
+                <td>{{colheita.tb_arvore_id}}</td>
+               
+            </tr>
+        </table>
+    </div>
+    
 </div>
 
-<div class="relatorio">
-    <h2>Colheitas cadastradas</h2>
-    <table>
-        <tr>
-            <th>Ação</th>
-            <th>Quantidade</th>
-            <th>Data</th>
-            <th>Arvore</th>
-        </tr>
-        <tr *ngFor="let colheita of relatorio">
-            <td><button>Excluir</button></td>
-            <td>{{colheita.quantidade}}</td>
-            <td>{{colheita.dt_colheita}}</td>
-            <td>{{colheita.tb_arvore_id}}</td>
-           
-        </tr>
-    </table>
-</div>
+
+

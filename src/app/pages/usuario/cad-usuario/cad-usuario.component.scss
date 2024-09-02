@@ -4,6 +4,7 @@ header{
         font-size: 1.5em;
     }
 }
+
 mat-form-field{
     margin-right: 15px;
     width: 20vw;
@@ -15,32 +16,15 @@ button{
 .grande{
     width: 40.8vw;
 }
-form{
-    height: 40vw;
-    width: 50vw;
-}
-header{
-    height:15vh;
-    h1{
-        font-size: 1.5em;
-    }
-}
-button{
-    margin-right: 19px;
-}
-.grande{
-    width: 40.8vw;
-}
-form{
-    height: 40vw;
-    width: 50vw;
-}
+
+
+
+
 .relatorio{
-    width: 80%;
-    height: 30%;
+    width: 100%;
     font-family: arial;
-    font-family: arial;
-    margin-top: -26%;
+    position: absolute;
+   
     th{
         border-bottom: 1px #ccc solid;
         

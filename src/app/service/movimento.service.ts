@@ -18,7 +18,7 @@ public addMovimento(info:any):Observable<any>{
   )
 
 }
-public geMovimento():Observable<any>{
+public getMovimento():Observable<any>{
 return this.http.get(
   'http://localhost:3000/movimento/buscaTodos',
   {observe:'response'}

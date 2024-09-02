@@ -1,4 +1,3 @@
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CadUsuarioComponent } from './cad-usuario.component';
@@ -22,4 +21,3 @@ describe('CadUsuarioComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

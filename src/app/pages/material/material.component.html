@@ -1,47 +1,55 @@
+
 <app-menu></app-menu>
 <div class="pagina">
     <header>
-        <h1>Administração | Material</h1>
+        <h1>Administração | Materiais</h1>
     </header>
-    <form [formGroup]="material">  
-        <mat-form-field appearance="outline" color="primary">
-            <mat-label>Tipo</mat-label>
-            <input matInput formControlName="tipo" type="text">
-        </mat-form-field> 
+    <form [formGroup]="material">
         <mat-form-field appearance="outline" color="primary">
             <mat-label>Nome</mat-label>
             <input matInput formControlName="nome" type="text">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary"  >
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="primary">
+            <mat-label>Tipo</mat-label>
+            <input matInput formControlName="tipo" type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="primary">
             <mat-label>Valor</mat-label>
-            <input matInput ="number" formControlName="valor">
-        </mat-form-field> 
-        <mat-form-field appearance="outline" color="primary" >
+            <input matInput type="number" formControlName="valor">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="primary">
             <mat-label>Fornecedor</mat-label>
             <input matInput formControlName="fornecedor" type="text">
-        </mat-form-field> 
+        </mat-form-field>
     </form>
-    <div class="controles"> 
-        <button mat-raised-button [disabled]="material.enabled" (click)="onIncluir()">Incluir</button>
-        <button mat-raised-button [disabled]="material.invalid" (click)="onSalvar()">Salvar</button>
-        <button mat-raised-button [disabled]="material.disabled" (click)="onCancelar()">Cancelar</button>
+
+    <div class="controles">
+        <button mat-stroked-button [disabled]="material.enabled" (click)="onIncluir()" color="primary">Incluir</button>
+        <button mat-stroked-button [disabled]="material.invalid" (click)="onSalvar()">Salvar</button>
+        <button mat-stroked-button [disabled]="material.disabled" (click)="onCancelar()">Cancelar</button>
     </div>
-     <div class='relatorio'>
+    <div class="relatorio">
         <h2>Materiais cadastrados</h2>
         <table>
             <tr>
                 <th>Ação</th>
-                <th>Tipo</th>
                 <th>Nome</th>
-                <th>Valor</th>
-                <th>Fornecedor</th>
+                <th>Tipo</th>
+                <th>valor</th>
+                <th>fornecedor</th>
+              
             </tr>
             <tr *ngFor="let material of relatorio">
                 <td><button>Excluir</button></td>
-                <td>{{material.tb_tipo_id}}</td>
                 <td>{{material.nome}}</td>
+                <td>{{material.tb_tipo_id}}</td>
                 <td>{{material.valor}}</td>
-                <td>{{material.Fornecedor}}</td>
+                <td>{{material.fornecedor}}</td>
             </tr>
         </table>
     </div>
+</div>
+
+
+
+

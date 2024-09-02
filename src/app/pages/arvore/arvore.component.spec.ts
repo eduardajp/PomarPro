@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArvoreComponent } from './arvore.component';
+import { arvoreComponent } from './arvore.component';
 
 describe('ArvoreComponent', () => {
-  let component: ArvoreComponent;
-  let fixture: ComponentFixture<ArvoreComponent>;
+  let component: arvoreComponent;
+  let fixture: ComponentFixture<arvoreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ArvoreComponent]
+      declarations: [arvoreComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ArvoreComponent);
+    fixture = TestBed.createComponent(arvoreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

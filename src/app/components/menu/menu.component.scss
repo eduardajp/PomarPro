@@ -1,18 +1,16 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 .sidebar {
     background-color: #f9e6b2;
     width: 268px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     border: 2px solid #f0c080;
     border-radius: 10px;
-    position: relative;
+    position: fixed;
+    top:10px;
+    left:5px;  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
